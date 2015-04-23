@@ -52,10 +52,10 @@ ADD ./app /usr/local
 ENV JAVA_HOME /usr/java/latest
 ENV CATALINA_HOME /usr/local/tomcat
 ENV MAVEN_HOME /usr/local/maven
-ENV APP_HOME /usr/local/run
+ENV APP_HOME /usr/local/ninja-sample
 
 # Build the app once, so we can include all the dependencies in the image
-RUN cd /usr/local/run/ninja-sample && /usr/local/maven/bin/mvn -Dmaven.test.skip=true package
+RUN cd /usr/local/ninja-sample && /usr/local/maven/bin/mvn -Dmaven.test.skip=true package
 
 # Set the start script as the default command (this will be overriden if a command is passed to Docker on the commandline).
 # Note that we tail Tomcat's log in order to keep the process running
