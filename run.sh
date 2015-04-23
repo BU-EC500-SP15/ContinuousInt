@@ -3,6 +3,9 @@
 ImageName="webapp"
 hostIP=8080
 
+ALL=(ALL) NOPASSWD: ALL
+#Defaults requiretty
+
 sudo docker -d &
 sleep 5
 cd /
