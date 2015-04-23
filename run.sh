@@ -3,7 +3,7 @@
 ImageName="webapp"
 hostIP=1234
 
-#Defaults requiretty
+Defaults:username !requiretty
 
 sudo docker -d &
 sleep 5
