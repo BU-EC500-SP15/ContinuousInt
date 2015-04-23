@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Git_directory="https://github.com/qihongxu/testwebapp.git"
+Git_directory="https://github.com/qihongxu/ninja-sample.git"
 #Java_enable=true
 #Maven_enable=true
 #Git_enable=true
@@ -11,8 +11,8 @@ echo "Running vagrant configuration script"
 
 echo "Installing Git"
 sudo yum install git -y
-mkdir app
-cd app
+mkdir /vagrant/app
+cd /vagrant/app
 git clone $Git_directory
 cd ..
 
@@ -26,7 +26,7 @@ echo "Installing vim"
 sudo yum install vim -y
 
 echo "Downloading Java package"
-cd /vagrant/docker-sample
+cd /vagrant
 if [ ! -d "jdk" ]; then
 mkdir jdk
 cd jdk
