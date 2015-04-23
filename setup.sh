@@ -11,10 +11,13 @@ echo "Running vagrant configuration script"
 
 echo "Installing Git"
 sudo yum install git -y
+cd /vagrant
+if [ ! -d "app" ]; then
 mkdir /vagrant/app
 cd /vagrant/app
 git clone $Git_directory
-cd ..
+fi
+cd /home/vagrant
 
 echo "Installing Docker"
 sudo yum install docker -y
