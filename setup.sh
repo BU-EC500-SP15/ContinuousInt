@@ -1,20 +1,13 @@
 #!/bin/bash
 
 Git_directory="https://github.com/qihongxu/ninja-sample.git"
-#Java_enable=true
-#Maven_enable=true
-#Git_enable=true
-#Docker_enable=true
-#Jenkins_enable=true
-#ProjectDownload_enable=true
+
 echo "Running vagrant configuration script"
 
 echo "Installing Git"
 sudo yum install git -y
 cd /vagrant
 if [ ! -d "app" ]; then
-mkdir /vagrant/app
-cd /vagrant/app
 git clone $Git_directory
 fi
 cd /home/vagrant
